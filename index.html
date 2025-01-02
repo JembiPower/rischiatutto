@@ -5,26 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rischiatutto</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>RISCHIATUTTO</h1>
-        </div>
-        <div class="game-board">
-            <!-- I cerchi delle domande vengono generati dinamicamente con JS -->
-        </div>
-    </div>
+    <header>
+        <h1>RISCHIATUTTO</h1>
+    </header>
+    <main>
+        <div class="game-board" id="game-board"></div>
+    </main>
 
-    <!-- Sezione per la domanda -->
-    <div id="modal" class="modal">
+    <!-- Modale per la domanda -->
+    <div class="modal" id="modal">
         <div class="modal-content">
             <h2 id="question-title"></h2>
             <div id="answers"></div>
             <button id="close-modal">Chiudi</button>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
