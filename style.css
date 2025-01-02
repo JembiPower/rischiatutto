@@ -1,1 +1,10 @@
-
+/* Inserisci qui tutti i tuoi stili CSS */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+/* Altri stili per le classi */
