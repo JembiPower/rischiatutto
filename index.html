@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-  <title>Rischiatutto</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rischiatutto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Rischiatutto</h1>
-    <div class="categoria">
-      <button class="categoria-btn" data-categoria="Storia">Storia</button>
-      <button class="categoria-btn" data-categoria="Geografia">Geografia</button>
-      <button class="categoria-btn" data-categoria="Scienze">Scienze</button>
-      <button class="categoria-btn" data-categoria="Cultura Generale">Cultura Generale</button>
-      <button class="categoria-btn" data-categoria="Sport">Sport</button>
+    <div class="container">
+        <div class="header">
+            <h1>RISCHIATUTTO</h1>
+        </div>
+        <div class="game-board">
+            <!-- I cerchi delle domande vengono generati dinamicamente con JS -->
+        </div>
     </div>
-    <div class="domanda"></div>
-    <div class="risposte"></div>
-    <div class="punteggio">Punteggio: <span id="punteggio">0</span></div>
-    <div class="timer">Tempo rimanente: <span id="timer">30</span> sec</div>
-  </div>
-  <script src="script.js"></script>
+
+    <!-- Sezione per la domanda -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="question-title"></h2>
+            <div id="answers"></div>
+            <button id="close-modal">Chiudi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
