@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Funzione per creare la griglia di domande
     const creaDomande = () => {
-        const container = document.querySelector('.categorie');
+        const container = document.querySelector('.griglia');
         categorie.forEach((categoria, catIndex) => {
             const categoriaDiv = document.createElement('div');
             categoriaDiv.classList.add('categoria');
@@ -22,20 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
             categoriaDiv.appendChild(titoloCategoria);
 
             numeri.forEach((punteggio, index) => {
-                const domanda = domandeData[index];
-                const semicerchio = document.createElement('button');
-                semicerchio.classList.add('semicerchio');
-                semicerchio.textContent = punteggio;
-                semicerchio.dataset.punteggio = punteggio;
-                semicerchio.dataset.categoria = categoria;
-                semicerchio.dataset.index = index;
+                // Creiamo un ellisse per ogni domanda
+                const ellisse = document.createElement('button');
+                ellisse.classList.add('ellisse');
+                ellisse.textContent = ''; // Non ci sono numeri dentro l'ellisse
+                ellisse.dataset.punteggio = punteggio;
+                ellisse.dataset.categoria = categoria;
+                ellisse.dataset.index = index;
 
                 // Funzione per visualizzare la domanda
-                semicerchio.addEventListener('click', () => {
+                ellisse.addEventListener('click', () => {
                     const questionScreen = document.getElementById('question-screen');
                     const domandaTitolo = document.getElementById('domanda-titolo');
                     const risposteDiv = document.getElementById('risposte');
-                    const domandaData = domandeData[semicerchio.dataset.index];
+                    const domandaData = domandeData.find(d => d.categoria === categoria && d !== domandeData[ellisse.dataset.index]);
 
                     // Mostra la domanda
                     domandaTitolo.textContent = domandaData.domanda;
@@ -51,14 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                 questionScreen.style.backgroundColor = 'red'; // Risposta sbagliata
                             }
 
-                            // Disabilita il semicerchio
-                            semicerchio.disabled = true;
-                            semicerchio.style.backgroundColor = 'gray';
+                            // Disabilita l'ellisse
+                            ellisse.disabled = true;
+                            ellisse.style.backgroundColor = 'gray';
 
                             // Nascondi la domanda dopo 2 secondi
                             setTimeout(() => {
                                 questionScreen.style.display = 'none';
-                                document.getElementById('main-screen').style.display = 'grid';
+                                document.getElementById('main-screen').style.display = 'flex';
                             }, 2000);
                         });
                         risposteDiv.appendChild(buttonRisposta);
@@ -72,9 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const strisciaDiv = document.createElement('div');
                 strisciaDiv.classList.add('striscia');
                 const span = document.createElement('span');
-                span.textContent = punteggio;
+                span.textContent = punteggio; // Mostriamo solo i numeri
                 strisciaDiv.appendChild(span);
-                strisciaDiv.appendChild(semicerchio);
+                strisciaDiv.appendChild(ellisse);
                 categoriaDiv.appendChild(strisciaDiv);
             });
 
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Funzione per chiudere il modal
     document.getElementById('close-modal').onclick = () => {
         document.getElementById('question-screen').style.display = 'none';
-        document.getElementById('main-screen').style.display = 'grid';
+        document.getElementById('main-screen').style.display = 'flex';
     };
 
     // Carica la griglia di domande
