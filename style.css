@@ -1,73 +1,74 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-#game-container {
+    margin: 0;
+    padding: 0;
     text-align: center;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 1200px;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-#scoreboard {
-    display: flex;
-    justify-content: space-between;
-}
-
-.category {
-    width: 18%;
-    background-color: #e9e9e9;
+header {
+    background-color: #b30000;
+    color: white;
     padding: 10px;
-    border-radius: 5px;
-    margin: 10px;
-    text-align: center;
 }
 
-.category h3 {
-    font-size: 24px;
+#punteggi {
+    text-align: left;
+    padding: 10px;
+}
+
+#punteggi ul {
+    list-style: none;
+}
+
+#domande {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.categorie {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categoria h3 {
     margin-bottom: 10px;
 }
 
-.questions {
-    margin-bottom: 20px;
+.striscia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 40px;
-    height: 40px;
+.striscia span {
+    margin-bottom: 10px;
+}
+
+.pallini {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.domanda {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    font-size: 18px;
+    border: none;
+    background-color: red;
+    color: white;
     cursor: pointer;
-    margin: 5px;
 }
 
-button:disabled {
+.domanda:disabled {
     background-color: gray;
-}
-
-button:hover {
-    background-color: #45a049;
+    cursor: not-allowed;
 }
