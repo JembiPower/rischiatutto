@@ -46,13 +46,31 @@ document.addEventListener('DOMContentLoaded', () => {
             button.dataset.categoria = categoria;
             button.dataset.punteggio = punteggio;
             button.dataset.domandaIndex = index;
+
             button.addEventListener('click', () => {
-                const rispostaCorretta = confirm(`Hai risposto correttamente alla domanda di ${categoria}: ${domanda.domanda}?`);
-                if (rispostaCorretta) {
+                const domandaTesto = domanda.domanda;
+                const modal = document.getElementById('modal');
+                const domandaTextElement = document.getElementById('domanda-text');
+                domandaTextElement.textContent = domandaTesto;
+
+                // Mostra il modal
+                modal.style.display = 'flex';
+
+                // Funzione per rispondere correttamente
+                document.getElementById('risposta-corretta').onclick = () => {
                     punteggi[categoria] += punteggio;
                     document.getElementById(`punteggio-${categoria.toLowerCase().replace(' ', '-')}`).innerText = punteggi[categoria];
-                }
-                button.disabled = true;
+                    button.disabled = true; // Disabilita il cerchio
+                    button.style.backgroundColor = 'gray'; // Cambia il colore
+                    modal.style.display = 'none'; // Nascondi il modal
+                };
+
+                // Funzione per rispondere sbagliato
+                document.getElementById('risposta-sbagliata').onclick = () => {
+                    button.disabled = true; // Disabilita il cerchio
+                    button.style.backgroundColor = 'gray'; // Cambia il colore
+                    modal.style.display = 'none'; // Nascondi il modal
+                };
             });
 
             const span = document.createElement('span');
@@ -70,4 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const categoriaDiv = creaDomande(categoria, domandePerCategoria[categoria]);
         containerCategorie.appendChild(categoriaDiv);
     });
+
+    // Chiudi il modal quando si clicca sulla X
+    document.getElementById('close-modal').onclick = () => {
+        document.getElementById('modal').style.display = 'none';
+    };
+
+    // Chiudi il modal quando si clicca fuori dal modal
+    window.onclick = (event) => {
+        const modal = document.getElementById('modal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
 });
