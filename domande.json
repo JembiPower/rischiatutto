@@ -1,157 +1,222 @@
-[
-  {
-    "categoria": "Storia",
-    "domanda": "In quale anno è scoppiata la Prima Guerra Mondiale?",
-    "risposte": ["1914", "1939", "1917", "1945"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Storia",
-    "domanda": "Chi era il leader dell'Unione Sovietica durante la Seconda Guerra Mondiale?",
-    "risposte": ["Stalin", "Lenin", "Khrushchov", "Trotsky"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Storia",
-    "domanda": "Nel 1492, Cristoforo Colombo scoprì le Americhe. Quale paese sponsorizzò il suo viaggio?",
-    "risposte": ["Spagna", "Portogallo", "Italia", "Francia"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Storia",
-    "domanda": "Chi fu il primo presidente degli Stati Uniti?",
-    "risposte": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "John Adams"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Storia",
-    "domanda": "In quale anno è stato firmato il trattato di Versailles che pose fine alla Prima Guerra Mondiale?",
-    "risposte": ["1919", "1923", "1930", "1925"],
-    "rispostaCorretta": 0
-  },
-
-  {
-    "categoria": "Geografia",
-    "domanda": "Qual è la capitale della Francia?",
-    "risposte": ["Parigi", "Londra", "Roma", "Madrid"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Geografia",
-    "domanda": "Qual è il fiume più lungo del mondo?",
-    "risposte": ["Nilo", "Amazzoni", "Yangtze", "Mississippi"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Geografia",
-    "domanda": "Qual è la montagna più alta del mondo?",
-    "risposte": ["Everest", "K2", "Kangchenjunga", "Makalu"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Geografia",
-    "domanda": "In quale continente si trova il deserto del Sahara?",
-    "risposte": ["Africa", "Asia", "America del Sud", "Oceania"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Geografia",
-    "domanda": "Quale paese ha la più grande superficie terrestre del mondo?",
-    "risposte": ["Russia", "Canada", "Cina", "Stati Uniti"],
-    "rispostaCorretta": 0
-  },
-
-  {
-    "categoria": "Sport",
-    "domanda": "Chi ha vinto il primo Mondiale di calcio nel 1930?",
-    "risposte": ["Uruguay", "Brasile", "Germania", "Italia"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Sport",
-    "domanda": "Qual è il massimo numero di punti che un giocatore può ottenere in una partita di tennis?",
-    "risposte": ["15", "30", "40", "Game"],
-    "rispostaCorretta": 3
-  },
-  {
-    "categoria": "Sport",
-    "domanda": "In quale sport si usa il termine 'slam'?",
-    "risposte": ["Tennis", "Boxe", "Golf", "Baseball"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Sport",
-    "domanda": "Chi ha vinto il maggior numero di medaglie olimpiche di tutti i tempi?",
-    "risposte": ["Michael Phelps", "Usain Bolt", "Larisa Latynina", "Simone Biles"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Sport",
-    "domanda": "Qual è la capitale del calcio italiano?",
-    "risposte": ["Torino", "Milano", "Roma", "Napoli"],
-    "rispostaCorretta": 2
-  },
-
-  {
-    "categoria": "Cultura Generale",
-    "domanda": "Chi ha scritto il romanzo '1984'?",
-    "risposte": ["George Orwell", "Aldous Huxley", "Ray Bradbury", "Philip K. Dick"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Cultura Generale",
-    "domanda": "In quale città si trova la Torre Eiffel?",
-    "risposte": ["Parigi", "Londra", "Roma", "Madrid"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Cultura Generale",
-    "domanda": "Chi ha inventato la lampadina?",
-    "risposte": ["Thomas Edison", "Nikola Tesla", "Alexander Graham Bell", "Benjamin Franklin"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Cultura Generale",
-    "domanda": "In quale anno è stato lanciato il primo uomo nello spazio?",
-    "risposte": ["1961", "1957", "1969", "1955"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Cultura Generale",
-    "domanda": "Chi è noto per il dipinto della 'Gioconda'?",
-    "risposte": ["Leonardo da Vinci", "Michelangelo", "Raffaello", "Caravaggio"],
-    "rispostaCorretta": 0
-  },
-
-  {
-    "categoria": "Scienze",
-    "domanda": "Qual è l'elemento chimico con simbolo H?",
-    "risposte": ["Idrogeno", "Elio", "Ossigeno", "Azoto"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Scienze",
-    "domanda": "Qual è la legge di Newton che riguarda l'azione e la reazione?",
-    "risposte": ["Terza legge", "Prima legge", "Seconda legge", "Legge della gravitazione universale"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Scienze",
-    "domanda": "Chi ha formulato la teoria della relatività?",
-    "risposte": ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Nikola Tesla"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Scienze",
-    "domanda": "Quale organo del corpo umano è responsabile per il pompaggio del sangue?",
-    "risposte": ["Cuore", "Fegato", "Polmoni", "Reni"],
-    "rispostaCorretta": 0
-  },
-  {
-    "categoria": "Scienze",
-    "domanda": "Qual è la formula chimica dell'acqua?",
-    "risposte": ["H2O", "CO2", "O2", "CH4"],
-    "rispostaCorretta": 0
-  }
-]
-
+{
+  "categories": [
+    "Storia",
+    "Geografia",
+    "Sport",
+    "Scienze",
+    "Cultura Generale",
+    "Arte"
+  ],
+  "questions": [
+    {
+      "category": "Storia",
+      "questions": [
+        {
+          "text": "Qual è la capitale d'Italia?",
+          "answers": ["Roma", "Milano", "Napoli", "Torino"],
+          "correct": 0,
+          "points": 1000
+        },
+        {
+          "text": "In che anno è iniziata la Prima Guerra Mondiale?",
+          "answers": ["1912", "1914", "1916", "1918"],
+          "correct": 1,
+          "points": 2000
+        },
+        {
+          "text": "Chi ha scritto 'La Divina Commedia'?",
+          "answers": ["Petrarca", "Boccaccio", "Dante Alighieri", "Manzoni"],
+          "correct": 2,
+          "points": 3000
+        },
+        {
+          "text": "In quale anno è caduto il Muro di Berlino?",
+          "answers": ["1987", "1989", "1991", "1993"],
+          "correct": 1,
+          "points": 4000
+        },
+        {
+          "text": "Chi ha scoperto l'America?",
+          "answers": ["Vespucci", "Colombo", "Magellano", "Cortès"],
+          "correct": 1,
+          "points": 8000
+        }
+      ]
+    },
+    {
+      "category": "Geografia",
+      "questions": [
+        {
+          "text": "Qual è il monte più alto del mondo?",
+          "answers": ["Monte Bianco", "Monte Everest", "K2", "Kilimangiaro"],
+          "correct": 1,
+          "points": 1000
+        },
+        {
+          "text": "Quale è il fiume più lungo d'Italia?",
+          "answers": ["Po", "Adige", "Arno", "Tevere"],
+          "correct": 0,
+          "points": 2000
+        },
+        {
+          "text": "Quale oceano è il più grande?",
+          "answers": ["Atlantico", "Pacifico", "Indiano", "Artico"],
+          "correct": 1,
+          "points": 3000
+        },
+        {
+          "text": "In quale continente si trova l'Egitto?",
+          "answers": ["Asia", "Africa", "Europa", "America"],
+          "correct": 1,
+          "points": 4000
+        },
+        {
+          "text": "Quale è la capitale della Germania?",
+          "answers": ["Monaco", "Francoforte", "Amburgo", "Berlino"],
+          "correct": 3,
+          "points": 8000
+        }
+      ]
+    },
+    {
+      "category": "Sport",
+      "questions": [
+        {
+          "text": "Quale paese ha vinto il maggior numero di Coppe del Mondo di calcio?",
+          "answers": ["Italia", "Germania", "Brasile", "Argentina"],
+          "correct": 2,
+          "points": 1000
+        },
+        {
+          "text": "Chi ha vinto più medaglie olimpiche nella storia?",
+          "answers": ["Phelps", "Bolt", "Lewis", "Nadia Comaneci"],
+          "correct": 0,
+          "points": 2000
+        },
+        {
+          "text": "Quale squadra di calcio ha vinto più Champions League?",
+          "answers": ["Real Madrid", "Barcellona", "Milan", "Liverpool"],
+          "correct": 0,
+          "points": 3000
+        },
+        {
+          "text": "Qual è il record mondiale per i 100 metri?",
+          "answers": ["9.58s", "9.62s", "9.72s", "9.80s"],
+          "correct": 0,
+          "points": 4000
+        },
+        {
+          "text": "Chi è considerato il GOAT (Greatest of All Time) del basket?",
+          "answers": ["Michael Jordan", "LeBron James", "Kobe Bryant", "Magic Johnson"],
+          "correct": 0,
+          "points": 8000
+        }
+      ]
+    },
+    {
+      "category": "Scienze",
+      "questions": [
+        {
+          "text": "Qual è il pianeta più grande del sistema solare?",
+          "answers": ["Terra", "Giove", "Saturno", "Nettuno"],
+          "correct": 1,
+          "points": 1000
+        },
+        {
+          "text": "Chi ha inventato il telefono?",
+          "answers": ["Edison", "Bell", "Tesla", "Marconi"],
+          "correct": 1,
+          "points": 2000
+        },
+        {
+          "text": "Quale è la formula chimica dell'acqua?",
+          "answers": ["H2O", "CO2", "O2", "H2O2"],
+          "correct": 0,
+          "points": 3000
+        },
+        {
+          "text": "Quale elemento chimico ha simbolo O?",
+          "answers": ["Oro", "Ossigeno", "Osmio", "Ottanio"],
+          "correct": 1,
+          "points": 4000
+        },
+        {
+          "text": "Chi è l'autore della teoria della relatività?",
+          "answers": ["Newton", "Einstein", "Galileo", "Bohr"],
+          "correct": 1,
+          "points": 8000
+        }
+      ]
+    },
+    {
+      "category": "Cultura Generale",
+      "questions": [
+        {
+          "text": "Chi ha scritto 'I Promessi Sposi'?",
+          "answers": ["Dante", "Manzoni", "Leopardi", "Verga"],
+          "correct": 1,
+          "points": 1000
+        },
+        {
+          "text": "Qual è la capitale del Giappone?",
+          "answers": ["Kyoto", "Osaka", "Tokyo", "Hiroshima"],
+          "correct": 2,
+          "points": 2000
+        },
+        {
+          "text": "Quale organo del corpo umano filtra il sangue?",
+          "answers": ["Fegato", "Cuore", "Polmoni", "Reni"],
+          "correct": 3,
+          "points": 3000
+        },
+        {
+          "text": "Quale è la moneta ufficiale del Regno Unito?",
+          "answers": ["Euro", "Sterlina", "Dollaro", "Franco"],
+          "correct": 1,
+          "points": 4000
+        },
+        {
+          "text": "Quale strumento misura i terremoti?",
+          "answers": ["Termometro", "Barometro", "Sismografo", "Anemometro"],
+          "correct": 2,
+          "points": 8000
+        }
+      ]
+    },
+    {
+      "category": "Arte",
+      "questions": [
+        {
+          "text": "Chi ha dipinto la Gioconda?",
+          "answers": ["Michelangelo", "Leonardo da Vinci", "Raffaello", "Donatello"],
+          "correct": 1,
+          "points": 1000
+        },
+        {
+          "text": "Chi ha scritto 'Romeo e Giulietta'?",
+          "answers": ["Shakespeare", "Dickens", "Hemingway", "Tolkien"],
+          "correct": 0,
+          "points": 2000
+        },
+        {
+          "text": "Quale animale è noto come 're della foresta'?",
+          "answers": ["Elefante", "Leone", "Tigre", "Orso"],
+          "correct": 1,
+          "points": 3000
+        },
+        {
+          "text": "Chi ha scritto 'La Divina Commedia'?",
+          "answers": ["Dante", "Boccaccio", "Petrarca", "Tasso"],
+          "correct": 0,
+          "points": 4000
+        },
+        {
+          "text": "Qual è il pianeta noto come il pianeta rosso?",
+          "answers": ["Venere", "Marte", "Giove", "Saturno"],
+          "correct": 1,
+          "points": 8000
+        }
+      ]
+    }
+  ]
+}
