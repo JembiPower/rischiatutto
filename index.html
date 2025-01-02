@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gioco di Domande</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rischiatutto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Gioco di Domande</h1>
-  <div class="categories" id="categories"></div>
+    <header>
+        <h1>Rischiatutto</h1>
+    </header>
 
-  <div class="overlay" id="questionOverlay">
-    <div class="modal">
-      <p id="questionText"></p>
-      <div class="answers" id="answers"></div>
+    <!-- Schermata principale con la griglia di domande -->
+    <main id="main-screen">
+        <section id="domande">
+            <div class="griglia">
+                <!-- I titoli delle categorie sono inseriti dinamicamente tramite JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Schermata della domanda a tutto schermo -->
+    <div id="question-screen" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2 id="domanda-titolo"></h2>
+            <div id="risposte">
+                <!-- Le risposte saranno inserite dinamicamente tramite JS -->
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
