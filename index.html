@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rischiatutto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Rischiatutto</h1>
     </header>
-
-    <!-- Schermata principale con la griglia di domande -->
-    <main id="main-screen">
-        <section id="domande">
-            <div class="griglia">
-                <!-- I titoli delle categorie sono inseriti dinamicamente tramite JS -->
-            </div>
-        </section>
-    </main>
-
-    <!-- Schermata della domanda a tutto schermo -->
-    <div id="question-screen" class="modal">
-        <div class="modal-content">
-            <span id="close-modal" class="close">&times;</span>
-            <h2 id="domanda-titolo"></h2>
-            <div id="risposte">
-                <!-- Le risposte saranno inserite dinamicamente tramite JS -->
-            </div>
+    <main>
+        <div id="game-board">
+            <!-- The game board columns and circles will be dynamically created by JavaScript -->
         </div>
-    </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Rischiatutto Game</p>
+    </footer>
 
+    <script src="questions.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
