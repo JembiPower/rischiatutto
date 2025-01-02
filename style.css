@@ -11,30 +11,25 @@ header {
     padding: 10px;
 }
 
-#punteggi {
-    text-align: left;
-    padding: 10px;
-}
-
-#punteggi ul {
-    list-style: none;
-}
-
-#domande {
-    display: flex;
-    justify-content: space-around;
+#main-screen {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     padding: 20px;
 }
 
 .categorie {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    grid-column-gap: 50px;
+    justify-items: center;
 }
 
 .categoria {
     display: flex;
     flex-direction: column;
+    justify-items: center;
     align-items: center;
 }
 
@@ -46,36 +41,36 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
 }
 
-.striscia span {
-    margin-bottom: 10px;
-}
-
-.pallini {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.domanda {
-    width: 60px; /* Cerchi più grandi */
+.semicerchio {
+    width: 120px; /* Dimensione aumentata per i semicerchi */
     height: 60px;
-    border-radius: 50%;
-    border: none;
     background-color: red;
+    border-radius: 60px 60px 0 0;
     color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    font-size: 18px;
+    border: none;
+    transition: background-color 0.3s ease;
 }
 
-.domanda:disabled {
+.semicerchio:hover {
+    background-color: #d90000;
+}
+
+.semicerchio:disabled {
     background-color: gray;
     cursor: not-allowed;
 }
 
+/* Modal per la domanda */
 .modal {
-    display: none; /* Nascondi il modal per impostazione predefinita */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -104,15 +99,21 @@ header {
     right: 10px;
 }
 
-#risposta-corretta, #risposta-sbagliata {
-    margin-top: 20px;
-    background-color: green;
+#risposte button {
+    background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 15px;
+    margin: 10px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-#risposta-sbagliata {
-    background-color: red;
+#risposte button:hover {
+    background-color: #45a049;
+}
+
+#risposte button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
 }
