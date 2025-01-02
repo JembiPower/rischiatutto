@@ -5,23 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rischiatutto</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>RISCHIATUTTO</h1>
+        <h1>Rischiatutto</h1>
     </header>
     <main>
-        <div class="game-board" id="game-board"></div>
-    </main>
+        <!-- Sezione Punteggi -->
+        <aside id="punteggi">
+            <h2>Punteggi</h2>
+            <ul>
+                <li>Storia: <span id="punteggio-storia">0</span></li>
+                <li>Geografia: <span id="punteggio-geografia">0</span></li>
+                <li>Sport: <span id="punteggio-sport">0</span></li>
+                <li>Cultura Generale: <span id="punteggio-cultura">0</span></li>
+                <li>Scienze: <span id="punteggio-scienze">0</span></li>
+            </ul>
+        </aside>
 
-    <!-- Modale per la domanda -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <h2 id="question-title"></h2>
-            <div id="answers"></div>
-            <button id="close-modal">Chiudi</button>
-        </div>
-    </div>
+        <!-- Sezione Domande -->
+        <section id="domande">
+            <div class="categoria">
+                <h3>Storia</h3>
+                <div class="pallini">
+                    <button class="domanda" data-categoria="Storia" data-punteggio="1000">●</button>
+                    <button class="domanda" data-categoria="Storia" data-punteggio="2000">●</button>
+                    <button class="domanda" data-categoria="Storia" data-punteggio="3000">●</button>
+                    <button class="domanda" data-categoria="Storia" data-punteggio="4000">●</button>
+                    <button class="domanda" data-categoria="Storia" data-punteggio="5000">●</button>
+                </div>
+            </div>
+            <div class="categoria">
+                <h3>Geografia</h3>
+                <div class="pallini">
+                    <button class="domanda" data-categoria="Geografia" data-punteggio="1000">●</button>
+                    <button class="domanda" data-categoria="Geografia" data-punteggio="2000">●</button>
+                    <button class="domanda" data-categoria="Geografia" data-punteggio="3000">●</button>
+                    <button class="domanda" data-categoria="Geografia" data-punteggio="4000">●</button>
+                    <button class="domanda" data-categoria="Geografia" data-punteggio="5000">●</button>
+                </div>
+            </div>
+            <div class="categoria">
+                <h3>Sport</h3>
+                <div class="pallini">
+                    <button class="domanda" data-categoria="Sport" data-punteggio="1000">●</button>
+                    <button class="domanda" data-categoria="Sport" data-punteggio="2000">●</button>
+                    <button class="domanda" data-categoria="Sport" data-punteggio="3000">●</button>
+                    <button class="domanda" data-categoria="Sport" data-punteggio="4000">●</button>
+                    <button class="domanda" data-categoria="Sport" data-punteggio="5000">●</button>
+                </div>
+            </div>
+            <div class="categoria">
+                <h3>Cultura Generale</h3>
+                <div class="pallini">
+                    <button class="domanda" data-categoria="Cultura Generale" data-punteggio="1000">●</button>
+                    <button class="domanda" data-categoria="Cultura Generale" data-punteggio="2000">●</button>
+                    <button class="domanda" data-categoria="Cultura Generale" data-punteggio="3000">●</button>
+                    <button class="domanda" data-categoria="Cultura Generale" data-punteggio="4000">●</button>
+                    <button class="domanda" data-categoria="Cultura Generale" data-punteggio="5000">●</button>
+                </div>
+            </div>
+            <div class="categoria">
+                <h3>Scienze</h3>
+                <div class="pallini">
+                    <button class="domanda" data-categoria="Scienze" data-punteggio="1000">●</button>
+                    <button class="domanda" data-categoria="Scienze" data-punteggio="2000">●</button>
+                    <button class="domanda" data-categoria="Scienze" data-punteggio="3000">●</button>
+                    <button class="domanda" data-categoria="Scienze" data-punteggio="4000">●</button>
+                    <button class="domanda" data-categoria="Scienze" data-punteggio="5000">●</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
