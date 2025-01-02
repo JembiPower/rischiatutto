@@ -5,5 +5,153 @@
     "risposte": ["1914", "1939", "1917", "1945"],
     "rispostaCorretta": 0
   },
-  // ... altre domande
+  {
+    "categoria": "Storia",
+    "domanda": "Chi era il leader dell'Unione Sovietica durante la Seconda Guerra Mondiale?",
+    "risposte": ["Stalin", "Lenin", "Khrushchov", "Trotsky"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Storia",
+    "domanda": "Nel 1492, Cristoforo Colombo scoprì le Americhe. Quale paese sponsorizzò il suo viaggio?",
+    "risposte": ["Spagna", "Portogallo", "Italia", "Francia"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Storia",
+    "domanda": "Chi fu il primo presidente degli Stati Uniti?",
+    "risposte": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "John Adams"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Storia",
+    "domanda": "In quale anno è stato firmato il trattato di Versailles che pose fine alla Prima Guerra Mondiale?",
+    "risposte": ["1919", "1923", "1930", "1925"],
+    "rispostaCorretta": 0
+  },
+
+  {
+    "categoria": "Geografia",
+    "domanda": "Qual è la capitale della Francia?",
+    "risposte": ["Parigi", "Londra", "Roma", "Madrid"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Geografia",
+    "domanda": "Qual è il fiume più lungo del mondo?",
+    "risposte": ["Nilo", "Amazzoni", "Yangtze", "Mississippi"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Geografia",
+    "domanda": "Qual è la montagna più alta del mondo?",
+    "risposte": ["Everest", "K2", "Kangchenjunga", "Makalu"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Geografia",
+    "domanda": "In quale continente si trova il deserto del Sahara?",
+    "risposte": ["Africa", "Asia", "America del Sud", "Oceania"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Geografia",
+    "domanda": "Quale paese ha la più grande superficie terrestre del mondo?",
+    "risposte": ["Russia", "Canada", "Cina", "Stati Uniti"],
+    "rispostaCorretta": 0
+  },
+
+  {
+    "categoria": "Sport",
+    "domanda": "Chi ha vinto il primo Mondiale di calcio nel 1930?",
+    "risposte": ["Uruguay", "Brasile", "Germania", "Italia"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Sport",
+    "domanda": "Qual è il massimo numero di punti che un giocatore può ottenere in una partita di tennis?",
+    "risposte": ["15", "30", "40", "Game"],
+    "rispostaCorretta": 3
+  },
+  {
+    "categoria": "Sport",
+    "domanda": "In quale sport si usa il termine 'slam'?",
+    "risposte": ["Tennis", "Boxe", "Golf", "Baseball"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Sport",
+    "domanda": "Chi ha vinto il maggior numero di medaglie olimpiche di tutti i tempi?",
+    "risposte": ["Michael Phelps", "Usain Bolt", "Larisa Latynina", "Simone Biles"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Sport",
+    "domanda": "Qual è la capitale del calcio italiano?",
+    "risposte": ["Torino", "Milano", "Roma", "Napoli"],
+    "rispostaCorretta": 2
+  },
+
+  {
+    "categoria": "Cultura Generale",
+    "domanda": "Chi ha scritto il romanzo '1984'?",
+    "risposte": ["George Orwell", "Aldous Huxley", "Ray Bradbury", "Philip K. Dick"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Cultura Generale",
+    "domanda": "In quale città si trova la Torre Eiffel?",
+    "risposte": ["Parigi", "Londra", "Roma", "Madrid"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Cultura Generale",
+    "domanda": "Chi ha inventato la lampadina?",
+    "risposte": ["Thomas Edison", "Nikola Tesla", "Alexander Graham Bell", "Benjamin Franklin"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Cultura Generale",
+    "domanda": "In quale anno è stato lanciato il primo uomo nello spazio?",
+    "risposte": ["1961", "1957", "1969", "1955"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Cultura Generale",
+    "domanda": "Chi è noto per il dipinto della 'Gioconda'?",
+    "risposte": ["Leonardo da Vinci", "Michelangelo", "Raffaello", "Caravaggio"],
+    "rispostaCorretta": 0
+  },
+
+  {
+    "categoria": "Scienze",
+    "domanda": "Qual è l'elemento chimico con simbolo H?",
+    "risposte": ["Idrogeno", "Elio", "Ossigeno", "Azoto"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Scienze",
+    "domanda": "Qual è la legge di Newton che riguarda l'azione e la reazione?",
+    "risposte": ["Terza legge", "Prima legge", "Seconda legge", "Legge della gravitazione universale"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Scienze",
+    "domanda": "Chi ha formulato la teoria della relatività?",
+    "risposte": ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Nikola Tesla"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Scienze",
+    "domanda": "Quale organo del corpo umano è responsabile per il pompaggio del sangue?",
+    "risposte": ["Cuore", "Fegato", "Polmoni", "Reni"],
+    "rispostaCorretta": 0
+  },
+  {
+    "categoria": "Scienze",
+    "domanda": "Qual è la formula chimica dell'acqua?",
+    "risposte": ["H2O", "CO2", "O2", "CH4"],
+    "rispostaCorretta": 0
+  }
 ]
+
