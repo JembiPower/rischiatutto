@@ -7,36 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
+    <header>
         <h1>Rischiatutto</h1>
-        <div id="scoreboard">
-            <div class="category" id="Storia">
-                <h3>Storia</h3>
-                <div class="questions"></div>
-                <p>Punteggio: 1000</p>
+    </header>
+    <main>
+        <!-- Sezione Punteggi -->
+        <aside id="punteggi">
+            <h2>Punteggi</h2>
+            <ul>
+                <li>Storia: <span id="punteggio-storia">0</span></li>
+                <li>Geografia: <span id="punteggio-geografia">0</span></li>
+                <li>Sport: <span id="punteggio-sport">0</span></li>
+                <li>Cultura Generale: <span id="punteggio-cultura">0</span></li>
+                <li>Scienze: <span id="punteggio-scienze">0</span></li>
+            </ul>
+        </aside>
+
+        <!-- Sezione Domande -->
+        <section id="domande">
+            <div class="categorie">
+                <!-- Le categorie saranno inserite dinamicamente tramite JS -->
             </div>
-            <div class="category" id="Geografia">
-                <h3>Geografia</h3>
-                <div class="questions"></div>
-                <p>Punteggio: 2000</p>
-            </div>
-            <div class="category" id="Sport">
-                <h3>Sport</h3>
-                <div class="questions"></div>
-                <p>Punteggio: 3000</p>
-            </div>
-            <div class="category" id="Cultura Generale">
-                <h3>Cultura Generale</h3>
-                <div class="questions"></div>
-                <p>Punteggio: 4000</p>
-            </div>
-            <div class="category" id="Scienze">
-                <h3>Scienze</h3>
-                <div class="questions"></div>
-                <p>Punteggio: 8000</p>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
