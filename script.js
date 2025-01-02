@@ -1,93 +1,85 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const domandeData = [
-        { categoria: "Storia", domanda: "Quando è caduto l'Impero Romano?", risposte: ["476 d.C.", "400 d.C.", "450 d.C.", "500 d.C."], rispostaCorretta: 0 },
-        { categoria: "Geografia", domanda: "Qual è la capitale della Francia?", risposte: ["Parigi", "Roma", "Madrid", "Londra"], rispostaCorretta: 0 },
-        { categoria: "Sport", domanda: "Chi ha vinto il Mondiale del 2006?", risposte: ["Italia", "Brasile", "Germania", "Francia"], rispostaCorretta: 0 },
-        { categoria: "Cultura Generale", domanda: "Chi ha scritto 'Don Chisciotte'?", risposte: ["Cervantes", "Shakespeare", "Dante", "Hemingway"], rispostaCorretta: 0 },
-        { categoria: "Scienze", domanda: "Cos'è l'acido solforico?", risposte: ["Un acido", "Un gas", "Un metallo", "Un alcol"], rispostaCorretta: 0 }
-    ];
+const categories = [
+    "Storia",
+    "Geografia",
+    "Sport",
+    "Scienze",
+    "Cultura Generale",
+    "Arte"
+];
 
-    const categorie = ["Storia", "Geografia", "Sport", "Cultura Generale", "Scienze"];
-    const numeri = [1000, 2000, 3000, 4000, 8000];
+const questions = [
+    // Domande prese dal JSON dell'utente (qui dovresti caricare il JSON o copiarlo)
+    // Ogni categoria avrà un array con le sue domande
+];
 
-    // Funzione per creare la griglia di domande
-    const creaDomande = () => {
-        const container = document.querySelector('.griglia');
-        categorie.forEach((categoria, catIndex) => {
-            const categoriaDiv = document.createElement('div');
-            categoriaDiv.classList.add('categoria');
+const teams = [
+    { name: "Squadra 1", points: 0 },
+    { name: "Squadra 2", points: 0 },
+    { name: "Squadra 3", points: 0 },
+    { name: "Squadra 4", points: 0 }
+];
 
-            const titoloCategoria = document.createElement('h3');
-            titoloCategoria.textContent = categoria;
-            categoriaDiv.appendChild(titoloCategoria);
+const gameBoard = document.getElementById("game-board");
 
-            numeri.forEach((punteggio, index) => {
-                // Creiamo un ellisse per ogni domanda
-                const ellisse = document.createElement('button');
-                ellisse.classList.add('ellisse');
-                ellisse.textContent = ''; // Non ci sono numeri dentro l'ellisse
-                ellisse.dataset.punteggio = punteggio;
-                ellisse.dataset.categoria = categoria;
-                ellisse.dataset.index = index;
+// Crea la griglia
+categories.forEach((category, index) => {
+    const column = document.createElement("div");
+    column.classList.add("column");
 
-                // Funzione per visualizzare la domanda
-                ellisse.addEventListener('click', () => {
-                    const questionScreen = document.getElementById('question-screen');
-                    const domandaTitolo = document.getElementById('domanda-titolo');
-                    const risposteDiv = document.getElementById('risposte');
-                    const domandaData = domandeData.find(d => d.categoria === categoria && d !== domandeData[ellisse.dataset.index]);
+    const header = document.createElement("h2");
+    header.textContent = category;
+    column.appendChild(header);
 
-                    // Mostra la domanda
-                    domandaTitolo.textContent = domandaData.domanda;
-                    risposteDiv.innerHTML = ''; // Pulisce le risposte
+    for (let i = 0; i < 5; i++) {
+        const circle = document.createElement("div");
+        circle.classList.add("circle");
+        circle.textContent = `${(i + 1) * 1000}`;
+        circle.dataset.category = index;
+        circle.dataset.questionIndex = i;
+        column.appendChild(circle);
+    }
 
-                    domandaData.risposte.forEach((risposta, i) => {
-                        const buttonRisposta = document.createElement('button');
-                        buttonRisposta.textContent = risposta;
-                        buttonRisposta.addEventListener('click', () => {
-                            if (i === domandaData.rispostaCorretta) {
-                                questionScreen.style.backgroundColor = 'green'; // Risposta corretta
-                            } else {
-                                questionScreen.style.backgroundColor = 'red'; // Risposta sbagliata
-                            }
+    gameBoard.appendChild(column);
+});
 
-                            // Disabilita l'ellisse
-                            ellisse.disabled = true;
-                            ellisse.style.backgroundColor = 'gray';
+// Gestione click sui cerchi
+let usedQuestions = [];
 
-                            // Nascondi la domanda dopo 2 secondi
-                            setTimeout(() => {
-                                questionScreen.style.display = 'none';
-                                document.getElementById('main-screen').style.display = 'flex';
-                            }, 2000);
-                        });
-                        risposteDiv.appendChild(buttonRisposta);
-                    });
+gameBoard.addEventListener("click", (event) => {
+    const target = event.target;
 
-                    // Nasconde la schermata principale
-                    document.getElementById('main-screen').style.display = 'none';
-                    questionScreen.style.display = 'flex'; // Mostra la schermata della domanda
-                });
+    if (target.classList.contains("circle")) {
+        const categoryIndex = target.dataset.category;
+        const questionIndex = target.dataset.questionIndex;
 
-                const strisciaDiv = document.createElement('div');
-                strisciaDiv.classList.add('striscia');
-                const span = document.createElement('span');
-                span.textContent = punteggio; // Mostriamo solo i numeri
-                strisciaDiv.appendChild(span);
-                strisciaDiv.appendChild(ellisse);
-                categoriaDiv.appendChild(strisciaDiv);
-            });
+        // Verifica se la domanda è già stata usata
+        const questionId = `${categoryIndex}-${questionIndex}`;
+        if (usedQuestions.includes(questionId)) return;
+        usedQuestions.push(questionId);
 
-            container.appendChild(categoriaDiv);
-        });
-    };
+        // Seleziona la squadra
+        const teamIndex = parseInt(prompt("Inserisci il numero della squadra (1-4):")) - 1;
+        if (teamIndex < 0 || teamIndex >= teams.length) return;
 
-    // Funzione per chiudere il modal
-    document.getElementById('close-modal').onclick = () => {
-        document.getElementById('question-screen').style.display = 'none';
-        document.getElementById('main-screen').style.display = 'flex';
-    };
+        // Mostra la domanda
+        const question = questions[categoryIndex].questions[questionIndex];
+        const userAnswer = prompt(question.text + "\n" + question.answers.join("\n"));
 
-    // Carica la griglia di domande
-    creaDomande();
+        if (parseInt(userAnswer) === question.correct) {
+            alert("Risposta corretta!");
+            teams[teamIndex].points += question.points;
+        } else {
+            alert("Risposta sbagliata!");
+            teams[teamIndex].points -= question.points;
+        }
+
+        // Aggiorna lo stato del cerchio
+        target.classList.add("used");
+
+        // Controlla se il gioco è finito
+        if (usedQuestions.length === categories.length * 5) {
+            let scores = teams.map(team => `${team.name}: ${team.points} punti`).join("\n");
+            alert(`Il gioco è finito!\n\n${scores}`);
+        }
+    }
 });
