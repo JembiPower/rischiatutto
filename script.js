@@ -1,22 +1,35 @@
-// Carica le domande dal file JSON
+// Variabili globali
 let domande = [];
 
-// Fetch delle domande
+// Carica le domande dal file JSON
 fetch('domande.json')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Errore nel caricamento del file JSON');
+        }
+        return response.json();
+    })
     .then(data => {
         domande = data;
         creaCerchi();
     })
-    .catch(error => console.error('Errore nel caricamento delle domande:', error));
+    .catch(error => {
+        console.error('Errore:', error);
+        document.querySelector('.game-board').innerHTML = '<p>Errore nel caricamento delle domande.</p>';
+    });
 
 // Funzione per creare i cerchi delle domande
 function creaCerchi() {
-    const board = document.querySelector('.game-board');
+    const board = document.getElementById('game-board');
+    if (domande.length === 0) {
+        board.innerHTML = '<p>Nessuna domanda disponibile.</p>';
+        return;
+    }
+
     domande.forEach((domanda, index) => {
         const circle = document.createElement('div');
         circle.classList.add('circle');
-        circle.textContent = domanda.categoria;
+        circle.textContent = domanda.categoria || 'Domanda';
         circle.addEventListener('click', () => mostraDomanda(index));
         board.appendChild(circle);
     });
@@ -28,6 +41,11 @@ function mostraDomanda(index) {
     const modal = document.getElementById('modal');
     const questionTitle = document.getElementById('question-title');
     const answersDiv = document.getElementById('answers');
+
+    if (!domanda) {
+        console.error('Domanda non trovata');
+        return;
+    }
 
     questionTitle.textContent = domanda.domanda;
     answersDiv.innerHTML = '';
@@ -45,18 +63,17 @@ function mostraDomanda(index) {
 // Funzione per verificare la risposta
 function verificaRisposta(index, rispostaCorretta) {
     if (index === rispostaCorretta) {
-        alert('Risposta Corretta!');
+        alert('✅ Risposta Corretta!');
     } else {
-        alert('Risposta Sbagliata!');
+        alert('❌ Risposta Sbagliata!');
     }
     chiudiModale();
 }
 
-// Funzione per chiudere il modale
+// Chiudi il modale
 function chiudiModale() {
-    const modal = document.getElementById('modal');
-    modal.style.display = 'none';
+    document.getElementById('modal').style.display = 'none';
 }
 
-// Chiudi modale con il bottone
+// Aggiungi evento per chiudere il modale
 document.getElementById('close-modal').addEventListener('click', chiudiModale);
