@@ -1,93 +1,119 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const domandeData = [
-        { categoria: "Storia", domanda: "Quando è caduto l'Impero Romano?", risposte: ["476 d.C.", "400 d.C.", "450 d.C.", "500 d.C."], rispostaCorretta: 0 },
-        { categoria: "Geografia", domanda: "Qual è la capitale della Francia?", risposte: ["Parigi", "Roma", "Madrid", "Londra"], rispostaCorretta: 0 },
-        { categoria: "Sport", domanda: "Chi ha vinto il Mondiale del 2006?", risposte: ["Italia", "Brasile", "Germania", "Francia"], rispostaCorretta: 0 },
-        { categoria: "Cultura Generale", domanda: "Chi ha scritto 'Don Chisciotte'?", risposte: ["Cervantes", "Shakespeare", "Dante", "Hemingway"], rispostaCorretta: 0 },
-        { categoria: "Scienze", domanda: "Cos'è l'acido solforico?", risposte: ["Un acido", "Un gas", "Un metallo", "Un alcol"], rispostaCorretta: 0 }
-    ];
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
-    const categorie = ["Storia", "Geografia", "Sport", "Cultura Generale", "Scienze"];
-    const numeri = [1000, 2000, 3000, 4000, 8000];
+header {
+    background-color: #b30000;
+    color: white;
+    padding: 10px;
+}
 
-    // Funzione per creare la griglia di domande
-    const creaDomande = () => {
-        const container = document.querySelector('.griglia');
-        categorie.forEach((categoria, catIndex) => {
-            const categoriaDiv = document.createElement('div');
-            categoriaDiv.classList.add('categoria');
+#main-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Altezza ridotta per farlo rimanere centrato */
+}
 
-            const titoloCategoria = document.createElement('h3');
-            titoloCategoria.textContent = categoria;
-            categoriaDiv.appendChild(titoloCategoria);
+.griglia {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
 
-            numeri.forEach((punteggio, index) => {
-                // Creiamo un ellisse per ogni domanda
-                const ellisse = document.createElement('button');
-                ellisse.classList.add('ellisse');
-                ellisse.textContent = ''; // Non ci sono numeri dentro l'ellisse
-                ellisse.dataset.punteggio = punteggio;
-                ellisse.dataset.categoria = categoria;
-                ellisse.dataset.index = index;
+.categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-                // Funzione per visualizzare la domanda
-                ellisse.addEventListener('click', () => {
-                    const questionScreen = document.getElementById('question-screen');
-                    const domandaTitolo = document.getElementById('domanda-titolo');
-                    const risposteDiv = document.getElementById('risposte');
-                    const domandaData = domandeData.find(d => d.categoria === categoria && d !== domandeData[ellisse.dataset.index]);
+.categoria h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
 
-                    // Mostra la domanda
-                    domandaTitolo.textContent = domandaData.domanda;
-                    risposteDiv.innerHTML = ''; // Pulisce le risposte
+.striscia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
 
-                    domandaData.risposte.forEach((risposta, i) => {
-                        const buttonRisposta = document.createElement('button');
-                        buttonRisposta.textContent = risposta;
-                        buttonRisposta.addEventListener('click', () => {
-                            if (i === domandaData.rispostaCorretta) {
-                                questionScreen.style.backgroundColor = 'green'; // Risposta corretta
-                            } else {
-                                questionScreen.style.backgroundColor = 'red'; // Risposta sbagliata
-                            }
+.ellisse {
+    width: 120px;
+    height: 60px; /* Ellisse modificata */
+    background-color: red;
+    border-radius: 50% / 100%;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
 
-                            // Disabilita l'ellisse
-                            ellisse.disabled = true;
-                            ellisse.style.backgroundColor = 'gray';
+.ellisse:hover {
+    background-color: #d90000;
+}
 
-                            // Nascondi la domanda dopo 2 secondi
-                            setTimeout(() => {
-                                questionScreen.style.display = 'none';
-                                document.getElementById('main-screen').style.display = 'flex';
-                            }, 2000);
-                        });
-                        risposteDiv.appendChild(buttonRisposta);
-                    });
+.ellisse:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
 
-                    // Nasconde la schermata principale
-                    document.getElementById('main-screen').style.display = 'none';
-                    questionScreen.style.display = 'flex'; // Mostra la schermata della domanda
-                });
+/* Modal per la domanda */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
 
-                const strisciaDiv = document.createElement('div');
-                strisciaDiv.classList.add('striscia');
-                const span = document.createElement('span');
-                span.textContent = punteggio; // Mostriamo solo i numeri
-                strisciaDiv.appendChild(span);
-                strisciaDiv.appendChild(ellisse);
-                categoriaDiv.appendChild(strisciaDiv);
-            });
+.modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
 
-            container.appendChild(categoriaDiv);
-        });
-    };
+.close {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
-    // Funzione per chiudere il modal
-    document.getElementById('close-modal').onclick = () => {
-        document.getElementById('question-screen').style.display = 'none';
-        document.getElementById('main-screen').style.display = 'flex';
-    };
+#risposte button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-    // Carica la griglia di domande
-    creaDomande();
-});
+#risposte button:hover {
+    background-color: #45a049;
+}
+
+#risposte button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
