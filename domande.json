@@ -1,0 +1,9 @@
+[
+  {
+    "categoria": "Storia",
+    "domanda": "In quale anno è scoppiata la Prima Guerra Mondiale?",
+    "risposte": ["1914", "1939", "1917", "1945"],
+    "rispostaCorretta": 0
+  },
+  // ... altre domande
+]
