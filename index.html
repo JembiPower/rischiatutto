@@ -7,30 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Rischiatutto</h1>
-    </header>
-
-    <!-- Schermata principale con la griglia di domande -->
-    <main id="main-screen">
-        <section id="domande">
-            <div class="griglia">
-                <!-- I titoli delle categorie sono inseriti dinamicamente tramite JS -->
-            </div>
-        </section>
-    </main>
-
-    <!-- Schermata della domanda a tutto schermo -->
-    <div id="question-screen" class="modal">
-        <div class="modal-content">
-            <span id="close-modal" class="close">&times;</span>
-            <h2 id="domanda-titolo"></h2>
-            <div id="risposte">
-                <!-- Le risposte saranno inserite dinamicamente tramite JS -->
-            </div>
+    <h1>RISCHIATUTTO</h1>
+    <div id="game-board"></div>
+    <div id="question-modal" class="hidden">
+        <div id="question-content">
+            <p id="question-text"></p>
+            <div id="answers"></div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
