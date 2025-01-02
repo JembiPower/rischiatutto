@@ -10,34 +10,24 @@
     <header>
         <h1>Rischiatutto</h1>
     </header>
-    <main>
-        <!-- Sezione Punteggi -->
-        <aside id="punteggi">
-            <h2>Punteggi</h2>
-            <ul>
-                <li>Storia: <span id="punteggio-storia">0</span></li>
-                <li>Geografia: <span id="punteggio-geografia">0</span></li>
-                <li>Sport: <span id="punteggio-sport">0</span></li>
-                <li>Cultura Generale: <span id="punteggio-cultura">0</span></li>
-                <li>Scienze: <span id="punteggio-scienze">0</span></li>
-            </ul>
-        </aside>
 
-        <!-- Sezione Domande -->
+    <!-- Schermata principale con la griglia di domande -->
+    <main id="main-screen">
         <section id="domande">
             <div class="categorie">
-                <!-- Le categorie saranno inserite dinamicamente tramite JS -->
+                <!-- I titoli delle categorie sono inseriti dinamicamente tramite JS -->
             </div>
         </section>
     </main>
 
-    <!-- Modal per visualizzare la domanda -->
-    <div id="modal" class="modal">
+    <!-- Schermata della domanda a tutto schermo -->
+    <div id="question-screen" class="modal">
         <div class="modal-content">
             <span id="close-modal" class="close">&times;</span>
-            <p id="domanda-text"></p>
-            <button id="risposta-corretta">Risposta Corretta</button>
-            <button id="risposta-sbagliata">Risposta Sbagliata</button>
+            <h2 id="domanda-titolo"></h2>
+            <div id="risposte">
+                <!-- Le risposte saranno inserite dinamicamente tramite JS -->
+            </div>
         </div>
     </div>
 
