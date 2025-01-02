@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rischiatutto</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gioco di Domande</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Rischiatutto</h1>
-    </header>
-    <main>
-        <div id="game-board">
-            <!-- The game board columns and circles will be dynamically created by JavaScript -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Rischiatutto Game</p>
-    </footer>
+  <h1>Gioco di Domande</h1>
+  <div class="categories" id="categories"></div>
 
-    <script src="questions.js"></script>
-    <script src="script.js"></script>
+  <div class="overlay" id="questionOverlay">
+    <div class="modal">
+      <p id="questionText"></p>
+      <div class="answers" id="answers"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
 
