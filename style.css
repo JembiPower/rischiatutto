@@ -59,16 +59,60 @@ header {
 }
 
 .domanda {
-    width: 30px;
-    height: 30px;
+    width: 60px; /* Cerchi più grandi */
+    height: 60px;
     border-radius: 50%;
     border: none;
     background-color: red;
     color: white;
     cursor: pointer;
+    font-size: 18px;
 }
 
 .domanda:disabled {
     background-color: gray;
     cursor: not-allowed;
+}
+
+.modal {
+    display: none; /* Nascondi il modal per impostazione predefinita */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#risposta-corretta, #risposta-sbagliata {
+    margin-top: 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#risposta-sbagliata {
+    background-color: red;
 }
